@@ -8,10 +8,10 @@ spec:
   volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Delete # Can also be 'Retain' if you want to keep the data after deletion
+  persistentVolumeReclaimPolicy: Delete 
   storageClassName: manual
   hostPath:
-    path: /var/lib/mysql # Change this to the actual path you want to use on your local machine
+    path: /var/lib/mysql
 
 ---
 
