@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
         - name: alpha-redis
-          image: proudevops/redis:latest  # leonardtia/redis:latest
-          imagePullPolicy: Always  # Set the image pull policy to Always
+          image: proudevops/redis:latest 
+          imagePullPolicy: Always 
           env:
             - name: REDIS_USER
               valueFrom:
