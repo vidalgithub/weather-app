@@ -18,8 +18,8 @@ spec:
           command: ['sh', '-c', 'echo -e "Checking for the availability of MySQL Server deployment"; while ! nc -z db 3306; do sleep 1; printf "-"; done; echo -e "  >> MySQL DB Server has started";']
       containers:
         - name: alpha-weather
-          image: proudevops/weather:1.0.1 # leonardtia/weather:latest
-          imagePullPolicy: Always  # Set the image pull policy to Always
+          image: proudevops/weather:1.0.1 
+          imagePullPolicy: Always 
           env:
             - name: APIKEY
               valueFrom:
@@ -34,8 +34,6 @@ apiVersion: v1
 kind: Service
 metadata:
   name: weather
-  annotations:
-    # alb.ingress.kubernetes.io/healthcheck-path: /index.html
 spec:
   selector:
     app: alpha-weather
